@@ -56,7 +56,7 @@ async def embed_command(ctx: lightbulb.Context) -> None:
         for index, status in enumerate(s[sku]["status"]):
             if s[sku]["link"][index] != None:
                 link = s[sku]["link"][index]
-                l.append(f"[status]({link})")
+                l.append(f"[{status}]({link})")
             else:
                 l.append(status)
         embed = hikari.Embed(title="Confirmed Tracker", description=f"Voici ce que j'ai trouver pour le sku **{sku}**", color="#fdfdfd")
