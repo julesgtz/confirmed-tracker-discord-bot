@@ -36,12 +36,16 @@ class Tracker:
         else:
             return info
 
-    def get_shipping_link(self):
+    def get_data(self):
         info = self.__get()
         if info == None:
-            return "No order at this email / order number"
+            return self.email, self.order, None, None, None, None
         else:
+            img = info.json().get("productLineItems", [{}])[0].get("imageUrl", None)
             link = info.json().get("shipments", [{}])[0].get("trackingUrl", None)
-            return link
+            status = info.json().get("shipments", [{}])[0].get("status", None)
+            sku = info.json().get("productLineItems", [{}])[0].get("productId", None)
+            return self.email ,self.order, img, link, status, sku
 
-print(Tracker("jamarlittle54@web.de","AFR90334882").get_shipping_link())
+
+
