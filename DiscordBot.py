@@ -69,16 +69,5 @@ async def embed_command(ctx: lightbulb.Context) -> None:
         embed.add_field(name="STATUS", value=all_status, inline=True)
         embed.set_footer("ToolsBot", icon="https://steamuserimages-a.akamaihd.net/ugc/2008072820057289343/6C08F1DA549037DD94593C9CDA0500810D2A51C1/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
         await ctx.respond(embed)
-# @bot.command
-# @lightbulb.command('img', 'Test command')
-# @lightbulb.implements(lightbulb.SlashCommand)
-# async def imgsnd(ctx):
-#     f = hikari.File('cc_groups.csv')
-#     await ctx.respond(f)
-@bot.command
-@lightbulb.command('img', 'Test command')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def imgsnd(ctx):
-    f = hikari.File('cc_groups.csv')
-    await ctx.respond(f)
+
 bot.run()
