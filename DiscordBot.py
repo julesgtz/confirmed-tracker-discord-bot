@@ -1,7 +1,6 @@
 import lightbulb
 import hikari
 from Class import Tracker
-import asyncio
 
 t = str(input("Enter bot's token : "))
 bot = lightbulb.BotApp(token=t, prefix="!")
