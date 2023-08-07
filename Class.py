@@ -1,6 +1,7 @@
 import requests
 
 class Tracker:
+    ds = {"RELEASED":"En Cours"}
     def __init__(self, email : str, order : str):
         self.email = email
         self.order = order
@@ -42,9 +43,19 @@ class Tracker:
             return self.email, self.order, None, None, None, None
         else:
             img = info.json().get("productLineItems", [{}])[0].get("imageUrl", None)
-            link = info.json().get("shipments", [{}])[0].get("trackingUrl", None)
-            status = info.json().get("shipments", [{}])[0].get("status", None)
-            sku = info.json().get("productLineItems", [{}])[0].get("productId", None)
+            try:
+                link = info.json().get("shipments", [{}])[0].get("trackingUrl", None)
+            except:
+                link = None
+            try:
+                status = info.json().get("shipments", [{}])[0].get("status", None)
+            except:
+                status = info.json().get("productLineItems", [{}])[0].get("status", None)
+                try:
+                    status = self.ds[status]
+                except:
+                    pass
+            sku = info.json().get("productLineItems", [{}])[0].get("articleNumber", None)
             return self.email ,self.order, img, link, status, sku
 
 
