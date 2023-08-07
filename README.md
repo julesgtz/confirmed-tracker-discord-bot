@@ -10,7 +10,8 @@ Ce projet est un Tracker de Commande pour vos commandes Confirmed. Il vous perme
 - [x] Affichage du status
 - [x] Lien pour suivre le colis si celui çi est disponible
 - [x] Affichage des SKU en fonction des commandes (pour mieux vous y retrouver)
-- [x] Récupere les factures (si disponible
+- [x] Récupere les factures (si disponibles)
+- [x] Très simple d'utilisation (juste mettre le token du bot !) 
 
 ## Configuration du Bot Discord
 
