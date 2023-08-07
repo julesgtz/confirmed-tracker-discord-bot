@@ -10,6 +10,7 @@ Ce projet est un Tracker de Commande pour vos commandes Confirmed. Il vous perme
 - [x] Affichage du status
 - [x] Lien pour suivre le colis si celui çi est disponible
 - [x] Affichage des SKU en fonction des commandes (pour mieux vous y retrouver)
+- [x] Récupere les factures (si disponible
 
 ## Configuration du Bot Discord
 
@@ -54,4 +55,11 @@ Vous pouvez aussi tracker plusieurs commandes a la fois, Exemple:
 
 Voici ce à quoi ressemble le tracker une fois la commande faite:
 
-![image](https://github.com/julesgtz/confirmed-tracker-discord-bot/assets/113105305/f3f580b5-e0cd-4048-a3c1-b9ab4ca9a2cb)
+![image](https://github.com/julesgtz/confirmed-tracker-discord-bot/assets/113105305/e3e9e279-d791-4fd8-b3f2-437b7eb099db)
+
+On peut voir ici tous les cas différents :
+
+1. Si le ``statut est souligné en bleu``, vous pouvez cliquer dessus pour accéder à ``votre lien de suivi``.
+2. Si le ``numéro de commande est souligné en bleu``, vous pouvez cliquer dessus pour accéder à la ``facture`` correspondante.
+3. Si rien n'est cliquable, c'est que rien n'est disponible !
+
