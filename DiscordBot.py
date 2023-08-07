@@ -52,16 +52,25 @@ async def embed_command(ctx: lightbulb.Context) -> None:
     for sku in s.items():
         sku = sku[0]
         l = []
+        invoices = []
         for index, status in enumerate(s[sku]["status"]):
             if s[sku]["link"][index] != None:
                 link = s[sku]["link"][index]
                 l.append(f"[{status}]({link})")
             else:
                 l.append(status)
+
+        for index, order in enumerate(s[sku]["order"]):
+            try:
+                ord, invoice = s[sku]["order"][index].split(",")
+                invoices.append(f"[{ord}]({invoice})")
+            except:
+                invoices.append(order)
+
         embed = hikari.Embed(title="Confirmed Tracker", description=f"Voici ce que j'ai trouver pour le sku **{sku}**", color="#fdfdfd")
         embed.set_thumbnail(s[sku]["img"])
         all_email = "\n".join(s[sku]["email"])
-        all_order = "\n".join(s[sku]["order"])
+        all_order = "\n".join(invoices)
         all_status = "\n".join(l)
         embed.add_field(name="EMAIL", value=all_email,inline=True)
         embed.add_field(name="ORDER NUMBER", value=all_order,inline=True)
