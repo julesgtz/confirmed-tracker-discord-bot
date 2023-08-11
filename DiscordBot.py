@@ -2,8 +2,8 @@ import lightbulb
 import hikari
 from Class import Tracker
 
-# t = str(input("Enter bot's token : "))
-bot = lightbulb.BotApp(token="MTEzMzg1MDQzNzE4Mzg4NTMyMg.GokJ9x.c6qEw_W-slqXd9H5tN4tTgG69gH0X0isOdLdmE")
+t = str(input("Enter bot's token : "))
+bot = lightbulb.BotApp(token=t)
 @bot.command
 @lightbulb.option("infos", "email:ordernumber", type=str, required=True)
 @lightbulb.command("confirmed", "Select Shop")
