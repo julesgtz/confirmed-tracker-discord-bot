@@ -11,7 +11,9 @@ Ce projet est un Tracker de Commande pour vos commandes Confirmed. Il vous perme
 - [x] Lien pour suivre le colis si celui çi est disponible
 - [x] Affichage des SKU en fonction des commandes (pour mieux vous y retrouver)
 - [x] Récupere les factures (si disponibles)
-- [x] Très simple d'utilisation (juste mettre le token du bot !) 
+- [x] Très simple d'utilisation (juste mettre le token du bot !)
+- [x] Répond en privé (evite de leak vos infos si le tool est utilisé sur un grand serveur)
+- [x] Requetes asynchrones avec aiohttp au lieu de requests (permet a plusieurs utilisateurs de faire la commande en meme temps) 
 
 ## Configuration du Bot Discord
 
