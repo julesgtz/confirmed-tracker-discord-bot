@@ -2,7 +2,7 @@
 
 ![Python Version](https://img.shields.io/badge/python-%3E%3D3.6-blue.svg)
 
-Ce projet est un Tracker de Commande pour vos commandes Confirmed. Il vous permet de suivre l'état de votre commande en enregistrant votre adresse e-mail et votre numéro de commande en écrivant une commande à travers le bot discord, tout est expliquer en dessous.
+Ce projet est un Tracker de Commande pour vos commandes Confirmed. Il vous permet de suivre l'état de votre commande en enregistrant votre adresse e-mail et votre numéro de commande en écrivant une commande à travers le bot discord, tout est expliquer en dessous. (Non maintenu , ne dois surement plus fonctionner)
 
 ## Features
 
